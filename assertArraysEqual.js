@@ -1,4 +1,4 @@
-function eqArrays(arr1, arr2) {                 // can use arr1 or a
+function assertArraysEqual(arr1, arr2) {                 // can use arr1 or a
   if (arr1.length !== arr2.length) {            // start with testing length, if length is not equal, your array is false from the beginning
     console.log(`🛑🛑🛑Assertion Failed: ${arr1} !== arr2`);
   }
@@ -11,4 +11,5 @@ function eqArrays(arr1, arr2) {                 // can use arr1 or a
   console.log(`✅✅✅Assertion Passed: ${arr1} === arr2`)
 }
 
+eqArrays([1, 2, 3], [1, 2, 9]);
 eqArrays([1, 2, 3], [1, 2, 9]);

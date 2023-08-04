@@ -6,7 +6,44 @@ function assertEqual(actual, expected) {
   }
 }
 
-function countLetters(sentence) {
+const countLetters = function(sentence) {
+  const result = {};
+  for(let i=0; i<sentence.length; i++){
+    const letter = sentence[i];
+    if(result[letter])
+    {
+      result[letter] =  result[letter] + 1;
+    }
+    else{
+      result[letter] = 1;
+    }
+  }
+
+  return result;
+}
+
+const result = countLetters("hello");
+console.log(result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function countLetters(sentence) {
   let result = {};
   for (i = 0; i<sentence.length; i++){
     let currentCharacter = sentence[i]; //store 1 character at a time
@@ -22,3 +59,5 @@ function countLetters(sentence) {
 
 let result = countLetters("Jane")
 console.log(result)
+
+*/

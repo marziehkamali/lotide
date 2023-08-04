@@ -1,3 +1,10 @@
+
+//a function that can compare two arrays for a perfect match.
+
+
+
+
+/* 
 function assertEqual(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅Assertion Passed: ${actual} === expected`);
@@ -5,6 +12,7 @@ function assertEqual(actual, expected) {
     console.log(`🛑🛑🛑Assertion Failed: ${actual} !== expected`);
   }
 }
+*/
 
 function eqArrays(arr1, arr2) {                 // can use arr1 or a
   if (arr1.length !== arr2.length) {            // start with testing length, if length is not equal, your array is false from the beginning

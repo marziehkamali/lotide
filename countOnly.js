@@ -6,31 +6,61 @@ function assertEqual(actual, expected) {
   }
 }
 
-// can create a function and store it in a variable! Call the function by calling variable later. 
+const countOnly = function(allItems,itemsToCount){
+  
+  // create an empty objec that we can use to tally how many times a name appears
+  // in memory, this object will look like
+  // {
+  //    "karl" : 1,
+  //    "jason" : 2 
+  // }
+  const result = {};
 
-const countOnly = function (allItems, itemsToCount) {  //has a function called countOnly with 2 parameters - aLLItems and itemsToCount)
-  const results = {};
+  // Go through each name in the array/ list of names
+  for(let i=0; i<allItems.length; i++){
 
-  for (const item of allItems) {
-    if (itemsToCount[item]) {
-      if (results[item]) {
-        results[item] += 1;
-      } else {
-        results[item] = 1;
+    // Get each name one at a time and store it in the var item
+    const item = allItems[i];
+
+    // Check if this name(item) is in the itemsToCount object
+    // We only care about counting a name, if its contained in itemsToCount and is set to true
+    if(itemsToCount[item]){
+
+      // Have we encountered this name before?
+      if(result[item]){
+        // Yes- add 1 to the current count
+        result[item] = result[item] + 1;
+      }else{
+        // No - this is the first time we encountered it, so lets count it as 1
+        result[item] = 1;
       }
     }
   }
 
-
-  return results;
-
-  /* results = {
-    "Jason": 1,
-    "Karima": undefined,
-    "Fang": 2
-  }
-  */
+  return result;
 }
+
+
+/* const countOnly = function(allItems, ItemsToCount){
+  const results = {}
+  for (const item of allItems) {
+    if (results[item]) {
+      results[item] += 1;
+    } else {
+      results[item] = 1;
+    }
+    console.log(item);
+  }
+  return results;
+} */
+
+// Go through each name in the list
+// Did we go through this name before?
+// Yes - Increase Tally
+// No - add 1 to the name and move on to next name
+// Is there anymore names?
+// Y - go to next name
+// N - List all names and the number of times they appear
 
 const firstNames = [
   "Karl",
@@ -45,9 +75,6 @@ const firstNames = [
 ];
 
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-console.log(result1);
-
-
 
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);

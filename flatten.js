@@ -33,7 +33,9 @@ function flatten(ary) {
 }
 
 console.log(flatten([1, 2, [3, 4], 5, [6]]))
-
+let answer1 = flatten([1, 2, [5, 6]]);
+let answer2 = [1, 2, 5, 6]
+//assertArraysEqual(answer1, answer2);
 // => [1, 2, 3, 4, 5, 6]
 
 // Create empty array called result
@@ -44,3 +46,14 @@ console.log(flatten([1, 2, [3, 4], 5, [6]]))
 // No more elements?
 // Yes - return result
 // No - continue
+
+function sum(a,b){
+  let total = a + b;
+  return total;
+
+}
+
+let answer = sum(8,9);
+let expected = 17;
+
+assertEqual(answer, 17)
