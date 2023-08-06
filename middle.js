@@ -40,10 +40,8 @@ function middle(array){
   return middleValue;
   } 
 
+  module.exports = middle;
 
-console.log(middle([1]))
-console.log(middle([1, 7, 4]))
-console.log(middle([1, 7, 4, 9]))
 
 //Implement middle which will take in an array and return the middle-most element(s) of the given array.
 

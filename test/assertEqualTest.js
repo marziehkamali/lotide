@@ -1,3 +1,5 @@
+const assertEqual = require('../assertEqual');
+
 
 function eqArrays(arr1, arr2) {                 // can use arr1 or a
   if (arr1.length !== arr2.length) {            // start with testing length, if length is not equal, your array is false from the beginning
@@ -13,6 +15,6 @@ function eqArrays(arr1, arr2) {                 // can use arr1 or a
   return true;
 }
  
-
-module.exports = eqArrays;
-
+let result = eqArrays([1, 2, 3], [1, 2, 3]);  // giving eqArrays a variable inorder to receive the result
+assertEqual(result, true); // => should PASS  // testing your result of true against expected of true.
+ 

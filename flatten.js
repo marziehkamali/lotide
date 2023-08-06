@@ -5,10 +5,10 @@ function assertArraysEqual(arr1, arr2) {                 // can use arr1 or a
 
   for (let i = 0; i < arr1.length; i++) {       // testing out each index to ensure its equal
     if (arr1[i] !== arr2[i]) {
-      return console.log(`🛑🛑🛑Assertion Failed: ${arr1} !== arr2`);;
+      return console.log(`🛑🛑🛑Assertion Failed: ${arr1} !== arr2`);
     }
   }
-  console.log(`✅✅✅Assertion Passed: ${arr1} === arr2`)
+  console.log(`✅✅✅Assertion Passed: ${arr1} === arr2`);
 }
 
 function assertEqual(actual, expected) {
@@ -21,39 +21,28 @@ function assertEqual(actual, expected) {
 
 
 function flatten(ary) {
-  var result = [];
-  for(var i = 0; i < ary.length; i++) {
-      if(Array.isArray(ary[i])) {
-          result = result.concat(flatten(ary[i]));
-      } else {
-          result.push(ary[i]);
-      }
+  let result = [];
+  for (let i = 0; i < ary.length; i++) {
+    if (Array.isArray(ary[i])) {
+      result = result.concat(flatten(ary[i]));
+    } else {
+      result.push(ary[i]);
+    }
   }
   return result;
 }
 
-console.log(flatten([1, 2, [3, 4], 5, [6]]))
+console.log(flatten([1, 2, [3, 4], 5, [6]]));
 let answer1 = flatten([1, 2, [5, 6]]);
-let answer2 = [1, 2, 5, 6]
-//assertArraysEqual(answer1, answer2);
+let answer2 = [1, 2, 5, 6];
+assertArraysEqual(answer1, answer2);
 // => [1, 2, 3, 4, 5, 6]
 
 // Create empty array called result
 // Go through each element in the array
-// Is it an array? 
+// Is it an array?
 // - No?  Add it to result
 // - Yes? Take each value from the inside array and add to result
 // No more elements?
 // Yes - return result
 // No - continue
-
-function sum(a,b){
-  let total = a + b;
-  return total;
-
-}
-
-let answer = sum(8,9);
-let expected = 17;
-
-assertEqual(answer, 17)
