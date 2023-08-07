@@ -1,24 +1,18 @@
 
-function middle(array){
-  let middleIndex;
-  middleIndex = array.length / 2;
-  if(array.length <=2){
-    return [];
-  } else if(array.length % 2 !== 0){ // if its odd
-    let roundedMiddleIndex =  Math.floor(middleIndex);
-    return array[roundedMiddleIndex];
-  }
-  else if( array.length % 2  === 0){ // its even
-    let secondMiddleIndex = array.length / 2;
-    let firstMiddleInex = secondMiddleIndex - 1;
+function middle(array) {
+  const length = array.length;
+  const middleIndex = Math.floor(length / 2);
 
-    let valueAtSecondIndex = array[secondMiddleIndex];
-    let valueAtFirstIndex = array[firstMiddleInex];
-    
-    return [valueAtFirstIndex, valueAtSecondIndex]
+  if (length <= 2) {
+    return [];
   }
-  return middleValue;
-  } 
+
+  if (length % 2 === 0) {
+    return [array[middleIndex - 1], array[middleIndex]];
+  } else {
+    return [array[middleIndex]];
+  }
+}
 
   module.exports = middle;
 

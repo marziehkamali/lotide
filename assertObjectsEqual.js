@@ -1,3 +1,4 @@
+const inspect = require('util').inspect; 
 
 function eqObjects(obj1, obj2) {
   const keys1 = Object.keys(obj1);
@@ -16,10 +17,12 @@ function eqObjects(obj1, obj2) {
   return true;
 }
 
-const assertObjectsEqual = function(actual, expected) {
-  const inspect = require('util').inspect; 
-  console.log(`Example label: ${inspect(actual)}`);
 
+
+const assertObjectsEqual = function(actual, expected) {
+  if(actual === expected) {
+
+  }
 };
 
 console.log(eqObjects(assertObjectsEqual));
