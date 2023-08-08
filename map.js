@@ -30,6 +30,8 @@ const map = function(array, callback) {
   return results;
 }
 
-const results1 = map(words, word => word[0]);
+/* const results1 = map(words, word => word[0]);
 console.log(results1);
 assertArraysEqual(results1,["blue", "green", "white", "navy", "red"]);
+ */
+module.exports =  map;

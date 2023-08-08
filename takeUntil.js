@@ -1,4 +1,4 @@
-const assertArraysEqual = require("./assertArraysEqual");
+const assertArraysEqual = require("./assertArraysEqual").default;
 
 const takeUntil = function(array, callback) {
   for(let i = 0; i < array.length; i++) {
@@ -33,3 +33,4 @@ const expected2 = ["I've", "been", "to", "Hollywood"];
 
 assertArraysEqual(actual2, expected2);
 
+module.exports = takeUntil;

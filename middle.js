@@ -16,5 +16,4 @@ function middle(array) {
 
   module.exports = middle;
 
-
-
+ 

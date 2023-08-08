@@ -22,7 +22,7 @@ function eqObjects(obj1, obj2) {
 
   return true;
 }
-
+/* 
 const shirtObject = { color: "Red", size: "medium" };
 const anotherShirtObject = { size: "medium", color: "red" };
 eqObjects(shirtObject, anotherShirtObject);
@@ -34,10 +34,10 @@ const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "Lon
 eqObjects(shirtObject, longSleeveShirtObject);
 assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
 
+ */
 
 
-
-
+module.exports = eqObjects;
 
 
 

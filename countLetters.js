@@ -22,11 +22,11 @@ const countLetters = function(sentence) {
   return result;
 }
 
-const result = countLetters("hello");
+/* const result = countLetters("hello");
 console.log(result);
+ */
 
-
-
+module.exports = countLetters;
 
 
 

@@ -1,5 +1,3 @@
-const inspect = require('util').inspect; 
-
 function eqObjects(obj1, obj2) {
   const keys1 = Object.keys(obj1);
   const keys2 = Object.keys(obj2);
@@ -18,11 +16,24 @@ function eqObjects(obj1, obj2) {
 }
 
 
+person1 = {
+  name: "Marzieh",
+  age: 29
+}
+person2 = {
+  name: "Marzieh",
+  age: 29
+};
 
 const assertObjectsEqual = function(actual, expected) {
-  if(actual === expected) {
-
+  const inspect = require('util').inspect; // <= add this line
+  if(eqObjects(actual, expected)) {
+    console.log(`✅✅✅Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`)
+  } else {
+    console.log(`🛑🛑🛑Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);;
   }
 };
 
-console.log(eqObjects(assertObjectsEqual));
+/* assertObjectsEqual(person1, person2);
+ */
+module.exports = assertObjectsEqual

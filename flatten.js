@@ -32,10 +32,10 @@ function flatten(ary) {
   return result;
 }
 
-console.log(flatten([1, 2, [3, 4], 5, [6]]));
+/* console.log(flatten([1, 2, [3, 4], 5, [6]]));
 let answer1 = flatten([1, 2, [5, 6]]);
 let answer2 = [1, 2, 5, 6];
-assertArraysEqual(answer1, answer2);
+assertArraysEqual(answer1, answer2); */
 // => [1, 2, 3, 4, 5, 6]
 
 // Create empty array called result
@@ -46,3 +46,5 @@ assertArraysEqual(answer1, answer2);
 // No more elements?
 // Yes - return result
 // No - continue
+
+module.exports = flatten;
