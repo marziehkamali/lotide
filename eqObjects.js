@@ -1,10 +1,11 @@
-assertEqual = function (actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
   } else {
     console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
 
 function eqObjects(obj1, obj2) {
   const keys1 = Object.keys(obj1);
@@ -22,5 +23,14 @@ function eqObjects(obj1, obj2) {
 
   return true;
 }
+
+const shirtObject = { color: "red", size: "medium" };
+const anotherShirtObject= { size: "medium", color: "red" };
+const actualResult = eqObjects(shirtObject , anotherShirtObject)
+assertEqual(actualResult,true); 
+
+const longSleeveShirtObject= { size: "medium", color: "red", sleeveLength: "long" };
+const actualResult2 = eqObjects(shirtObject , longSleeveShirtObject); 
+assertEqual(actualResult2, false);
 
 module.exports = eqObjects;

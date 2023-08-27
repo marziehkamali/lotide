@@ -1,23 +1,23 @@
-function assertArraysEqual(arr1, arr2) {
-  if (arr1.length !== arr2.length) { 
-    console.log(`🛑🛑🛑Assertion Failed: ${arr1} !== arr2`);
+function eqArrays(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
   }
 
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
-      return console.log(`🛑🛑🛑Assertion Failed: ${arr1} !== arr2`);;
+      return false;
     }
   }
-  console.log(`✅✅✅Assertion Passed: ${arr1} === arr2`)
+  return true;
 }
 
-function assertEqual(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === expected`);
+const assertArraysEqual = function (arr1, arr2) {
+  if (eqArrays(arr1, arr2)) {
+    console.log(`✅✅✅Assertion Passed: ${arr1} === ${arr2}`);
   } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== expected`);
+      console.log(`🛑🛑🛑Assertion Failed: ${arr1} !== ${arr2}`);
   }
-}
+};
 
 const letterPositions = function (sentence) {
   const results = {};
@@ -33,6 +33,9 @@ const letterPositions = function (sentence) {
   }
   return results;
 }
+console.log(letterPositions ("Lighthouse"));
+assertArraysEqual(letterPositions("hello").e, [1]);
+assertArraysEqual(letterPositions("bye").e, [2]);
 
 module.exports = letterPositions;
 

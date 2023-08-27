@@ -6,12 +6,12 @@ function assertEqual(actual, expected) {
   }
 }
 
-const countLetters = function (sentence) {
+const countLetters = function (string) {
   const result = {};
-  for (let i = 0; i < sentence.length; i++) {
-    const letter = sentence[i];
+  for (let i = 0; i < string.length; i++) {
+    const letter = string[i];
     if (result[letter]) {
-      result[letter] = result[letter] + 1;
+      result[letter] += 1;
     }
     else {
       result[letter] = 1;
@@ -20,5 +20,8 @@ const countLetters = function (sentence) {
 
   return result;
 }
+
+console.log(countLetters("LHL"));
+console.log(countLetters("APPLE"));
 
 module.exports = countLetters;

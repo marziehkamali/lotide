@@ -19,5 +19,11 @@ const assertArraysEqual = function (arr1, arr2) {
   }
 };
 
+// test assertArraysEqual should print assertion passed 
+assertArraysEqual(["a", 1, 2], ["a", 1, 2]);
+
+// test assertArraysEqual should print assertion failed
+
+assertArraysEqual(["a", 2, 4], ["a", 1, 2]);
 
 module.exports = assertArraysEqual; 

@@ -39,7 +39,7 @@ let result2 = middle([1, 2]);
 assertArraysEqual(result2, []);
 
 let result3 = middle([1, 2, 3, 4]);
-assertArraysEqual(result3, [2, 4]);
+assertArraysEqual(result3, [2, 3]);
 
 module.exports = middle;
 

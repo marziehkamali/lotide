@@ -36,6 +36,6 @@ assertArraysEqual(result, [1, 2, 3, 4, 5, 6]);
 
 
 let result2 = flatten([1, 2, [3, 4], 5, [6]]);
-assertArraysEqual(result2, [1, 2, [3], 4, 5, 6]);
+assertArraysEqual(result2, [1, 2, 3, 4, 5, 6]);
 
 module.exports = flatten;

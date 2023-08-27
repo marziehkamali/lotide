@@ -35,7 +35,7 @@ let expected = ["world", "Lighthouse"];
 assertArraysEqual(result, expected);
 
 let result2 = without([1, 2, 3], [2]);
-let expected2 = [1, 2];
+let expected2 = [1, 3];
 assertArraysEqual(result2, expected2);
 
 

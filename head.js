@@ -14,6 +14,6 @@ function head(array) {
 }
 
 assertEqual(head([1, 2, 3, 4]), 1);
-assertEqual(head([1, 2]), 2);
+assertEqual(head([1, 2]), 1);
 
 module.exports = head;
