@@ -1,8 +1,8 @@
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === expected`);
+    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
   } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== expected`);
+    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 
@@ -26,12 +26,7 @@ let answer = findKey({
   "Ora": { stars: 2 },
   "Akelarre": { stars: 3 }
 }, x => x.stars === 2);
-
-
-let actual = answer
-let expected = "noma";
-
-assertEqual(answer, expected);
+assertEqual(answer, "noma");
 
 let answer2 = findKey({
   "Blue Hill": { stars: 1 },
@@ -41,5 +36,7 @@ let answer2 = findKey({
   "Ora": { stars: 2 },
   "Akelarre": { stars: 3 }
 }, x => x.stars === 9);
+
+assertEqual(answer2, undefined);
 
 module.exports = findKey;
