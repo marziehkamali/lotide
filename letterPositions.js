@@ -11,13 +11,7 @@ function eqArrays(arr1, arr2) {
   return true;
 }
 
-const assertArraysEqual = function (arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
-    console.log(`✅✅✅Assertion Passed: ${arr1} === ${arr2}`);
-  } else {
-      console.log(`🛑🛑🛑Assertion Failed: ${arr1} !== ${arr2}`);
-  }
-};
+const assertArraysEqual = require("./assertArraysEqual");
 
 const letterPositions = function (sentence) {
   const results = {};
@@ -33,7 +27,6 @@ const letterPositions = function (sentence) {
   }
   return results;
 }
-console.log(letterPositions ("Lighthouse"));
 assertArraysEqual(letterPositions("hello").e, [1]);
 assertArraysEqual(letterPositions("bye").e, [2]);
 
