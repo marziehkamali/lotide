@@ -1,6 +1,6 @@
 {
   "name": "@marziehkamali/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lodash library clone for learning purposes",
   "main": "arrays.js",
   "directories": {
