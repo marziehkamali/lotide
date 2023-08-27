@@ -1,17 +1,16 @@
 const assertArraysEqual = require("./assertArraysEqual").default;
 
-const takeUntil = function(array, callback) {
-  for(let i = 0; i < array.length; i++) {
-  let result = callback(array[i]) 
-  if(result === true) {
-    return array.slice(0, i);
-  } 
-    
+const takeUntil = function (array, callback) {
+  for (let i = 0; i < array.length; i++) {
+    let result = callback(array[i])
+    if (result === true) {
+      return array.slice(0, i);
+    }
+
   }
   return array;
-  
-}
 
+}
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);

@@ -1,10 +1,10 @@
 
-function eqArrays(arr1, arr2) {                 // can use arr1 or a
-  if (arr1.length !== arr2.length) {            // start with testing length, if length is not equal, your array is false from the beginning
+function eqArrays(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
     return false;
   }
 
-  for (let i = 0; i < arr1.length; i++) {       // testing out each index to ensure its equal
+  for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
       return false;
     }
@@ -12,7 +12,6 @@ function eqArrays(arr1, arr2) {                 // can use arr1 or a
 
   return true;
 }
- 
+
 
 module.exports = eqArrays;
-

@@ -6,14 +6,12 @@ function middle(array) {
   if (length <= 2) {
     return [];
   }
-
-  if (length % 2 === 0) {
+  else if (length % 2 === 0) {
     return [array[middleIndex - 1], array[middleIndex]];
   } else {
     return [array[middleIndex]];
   }
 }
 
-  module.exports = middle;
+module.exports = middle;
 
- 

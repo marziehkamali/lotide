@@ -1,9 +1,9 @@
-function assertArraysEqual(arr1, arr2) {                 // can use arr1 or a
-  if (arr1.length !== arr2.length) {            // start with testing length, if length is not equal, your array is false from the beginning
+function assertArraysEqual(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
     console.log(`🛑🛑🛑Assertion Failed: ${arr1} !== arr2`);
   }
 
-  for (let i = 0; i < arr1.length; i++) {       // testing out each index to ensure its equal
+  for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
       return console.log(`🛑🛑🛑Assertion Failed: ${arr1} !== arr2`);
     }
@@ -31,20 +31,5 @@ function flatten(ary) {
   }
   return result;
 }
-
-/* console.log(flatten([1, 2, [3, 4], 5, [6]]));
-let answer1 = flatten([1, 2, [5, 6]]);
-let answer2 = [1, 2, 5, 6];
-assertArraysEqual(answer1, answer2); */
-// => [1, 2, 3, 4, 5, 6]
-
-// Create empty array called result
-// Go through each element in the array
-// Is it an array?
-// - No?  Add it to result
-// - Yes? Take each value from the inside array and add to result
-// No more elements?
-// Yes - return result
-// No - continue
 
 module.exports = flatten;

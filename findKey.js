@@ -18,8 +18,6 @@ function findKey(object, callback) {
 
 }
 
-
-
 let answer = findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri": { stars: 3 },
@@ -43,17 +41,5 @@ let answer2 = findKey({
   "Ora": { stars: 2 },
   "Akelarre": { stars: 3 }
 }, x => x.stars === 9);
-/* 
-let actual1 = answer2;
-let expected1 = undefined;
-assertEqual(actual1, expected1);
- */
-
-
-// => "noma
-
-/* function a (x){ 
-  if x.stars === 2
-} return true; */
 
 module.exports = findKey;
